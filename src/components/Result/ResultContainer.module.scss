@@ -1,0 +1,54 @@
+@import "../../scss/color.scss";
+
+.resultWrap {
+   margin-top: 20px;
+   padding-top: 20px;
+   width: 100%;
+   border-top: 2px dotted #ffc83d;
+   .desc{
+      font-size: 1rem;
+      .pointColor{
+         font-weight: bold;
+         color: $pointColor;
+      }
+   }
+   .inputSubject{
+      margin-top: 10px;
+      display: flex;
+      justify-content:space-around;
+      span{
+         display: block;
+         font-weight: 700;
+         font-size: .9rem;
+         font-family: 'Noto Sans KR', sans-serif;
+         text-align: center;
+         &:first-child{
+            width: 80%;
+         }
+      }
+   }
+   .inputBoxes {
+      margin-top: 10px;
+      display: flex;
+      input {
+         padding: 5px 8px;
+         width: 100%;
+         font-size: 0.8rem;
+         vertical-align: top;
+         margin-right: 3px;
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   }
+   .btnResultCheck {
+      margin-top: 15px;
+      padding: 12px 0;
+      width: 100%;
+      color: #fff;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      font-family: 'Yeon Sung', cursive;
+      background-color: $pointColor;
+   }
+}

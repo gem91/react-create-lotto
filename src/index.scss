@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Yeon+Sung&display=swap');
+
+// font-family: 'Gowun Batang', serif;
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Yeon Sung', cursive;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Gowun Batang', serif;
+}
+
+button {
+   outline: 0;
+   border: 0;
+   cursor: pointer;
+}
+
+body {
+   color: #333;
+   font-size: 16px;
+}
