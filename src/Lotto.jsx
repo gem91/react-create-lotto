@@ -5,42 +5,51 @@ import ResultContainer from "./components/Result/ResultContainer";
 import { useEffect } from "react";
 
 function App() {
-   const [ money, setMoney ] = useState(0);
-   const [ ticketCount, setTicketCount ] = useState(0);
-   const [ randomNumbers, setRandomNumbers ] = useState([0]);
-
-
-// 돈 입금하면 랜덤 번호얻기
-useEffect(()=>{
-   const count = setTicketCount(money/1000);   // 구입한 장수
-
    const 로또개수 = 7;
-   const getRandomLists = [];
-   const randomArray = new Set();
+   const [money, setMoney] = useState(0);
+   const [randomArray, setRandomArray] = useState([]);
 
-   while( randomArray.size !== 로또개수 ){
-      const random = getRandomNumber(1, 10);
-      randomArray.add(random);
-   }
-   getRandomLists.push([...randomArray]);
-   setRandomNumbers(getRandomLists)
-   console.log(randomNumbers);
-}, [money])
+   const [winNums, setWinNums] = useState({
+      first: 0,
+      second: 0,
+      third: 0,
+      fourth: 0,
+      fifth: 0,
+      sixth: 0,
+      seventh: 0,
+   });
 
+   // 돈 입금하면 랜덤 번호얻기
+   useEffect(() => {
+      const getRandomLists = [];
+      for (let ticket = 0; ticket < money / 1000; ticket++) {
+         const setRandomData = new Set();
+         while (setRandomData.size !== 로또개수) {
+            const random = getRandomNumber(1, 10);
+            setRandomData.add(random);
+         }
+         getRandomLists.push([...setRandomData]);
+      }
+      setRandomArray([...getRandomLists]);
+      console.log(randomArray);
+   }, [money]);
 
-
-   function getRandomNumber (min, max) {
+   function getRandomNumber(min, max) {
       return Math.floor(Math.random() * (max - min) + min) + 1;
    }
-
 
    return (
       <div className={styles.wrap}>
          <h1>인생 한방, 행운의 🎱LOTTO-re</h1>
          <div className={styles.inner}>
             <p className={styles.text}>구입할 금액을 입력해주세요</p>
-            <BuyContainer money={money} setMoney={setMoney} ticketCount={ticketCount} setTicketCount={setTicketCount} setRandomNumbers={setRandomNumbers} />
-            <ResultContainer />
+            <BuyContainer
+               money={money}
+               setMoney={setMoney}
+               setRandomArray={setRandomArray}
+               randomArray={randomArray}
+            />
+            <ResultContainer winNums={winNums} setWinNums={setWinNums} />
          </div>
       </div>
    );

@@ -6,12 +6,12 @@
    margin: 0 auto;
    padding: 40px 65px;
    width: 600px;
-   transform: translate(-50%, -70%);
+   transform: translate(-50%, -50%);
    border: 1rem solid;
    border-image: linear-gradient(0deg, #12c2e9, #c471ed, #f64f59) 1;
    h1 {
       font-size: 2.2rem;
-      font-family: 'Yeon Sung', cursive;
+      font-family: "Yeon Sung", cursive;
       text-align: center;
    }
    .inner {
@@ -19,8 +19,5 @@
       .text {
          font-size: 1.05rem;
       }
-      
    }
 }
-
-
