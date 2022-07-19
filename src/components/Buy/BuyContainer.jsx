@@ -39,7 +39,7 @@ const BuyContainer = ({ money, setMoney, randomArray }) => {
                type="submit"
                onClick={onSubmit}
             >
-               확인
+               가즈아!!
             </button>
          </div>
          <BuyTicektNumbers money={money} randomArray={randomArray} />

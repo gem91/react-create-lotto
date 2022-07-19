@@ -51,5 +51,8 @@
       letter-spacing: 2px;
       font-family: "Yeon Sung", cursive;
       background-color: $pointColor;
+      &:hover{
+         opacity: .8;
+      }
    }
 }

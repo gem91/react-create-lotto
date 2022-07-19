@@ -24,18 +24,27 @@
 		}
 		.tableLists {
 			margin-top: 20px;
-			width: 100%;
+			width: 100%; 
+			border-spacing: 0px;
+			thead{
+				tr{
+					background-color: $pointColor;
+					color: #fff;
+          font-size: 0.8rem;
+				}
+			}
+			tbody{
+				td{
+					border-bottom: 1px solid #dfdfdf;
+				}
+			}
 			th,
-			tr,
 			td {
-				padding: 5px 0;
+				padding: 8px 0;
 				text-align: center;
 			}
 			th {
 				font-weight: bold;
-			}
-			tr {
-					border: 1px solid #555;
 			}
 		}
 		.resetArea{

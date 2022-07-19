@@ -14,12 +14,14 @@
       .btnConfirm {
          width: 20%;
          height: 36px;
-         padding: 0 20px;
          font-size: .9rem;
          color: #fff;
          font-family: 'Noto Sans KR', sans-serif;
          vertical-align: top;
          background-color: $pointColor;
+         &:hover{
+            opacity: .8;
+         }
       }
    }
    .hasTickets {
@@ -92,6 +94,7 @@
          }
          &.list{
             display: flex;
+            flex-wrap: wrap;
             li {
                margin-right: 10px;
               .ticketIcon {display: block;}
