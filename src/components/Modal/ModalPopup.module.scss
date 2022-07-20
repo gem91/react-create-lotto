@@ -1,7 +1,7 @@
 @import "../../scss/color.scss";
 
 .modalWrap{
-	position:absolute;
+	position:fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -38,14 +38,24 @@
 					border-bottom: 1px solid #dfdfdf;
 				}
 			}
+			tfoot{
+				.revenue{
+					font-weight: bold;
+					font-size: .85rem;
+					color: $pointColor;
+				}
+			}
 			th,
 			td {
-				padding: 8px 0;
+				padding: 10px 0;
 				text-align: center;
+				font-size: .85rem;
+				font-family: 'Noto Sans KR', sans-serif;
 			}
 			th {
 				font-weight: bold;
 			}
+			
 		}
 		.resetArea{
 			position: relative;
