@@ -6,8 +6,8 @@ const TicketList = ({ random }) => {
       <li>
          <span className={styles.ticketIcon}>🎟️</span>
          <p className={styles.TicketNumbers}>
-            {random.map((num) => (
-               <span>{num}</span>
+            {random.map((num, idx) => (
+               <span key={idx}>{num}</span>
             ))}
          </p>
       </li>

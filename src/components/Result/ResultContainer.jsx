@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import styles from "./ResultContainer.module.scss";
 
-const ResultContainer = ({ winNums, setWinNums, setIsModal }) => {
+const ResultContainer = ({ winNums, setWinNums, handlePopup }) => {
    const resultRef = useRef();
 
+   // 당첨번호 넣는 input 영역
    const handleChange = (e) => {
       let { name , value } = e.target;
       if(value >= 0 || value <= 9 ){
@@ -20,7 +21,14 @@ const ResultContainer = ({ winNums, setWinNums, setIsModal }) => {
    };
 
    const handleModal = (e) => {
-      setIsModal(true)
+      for( let num of Object.values(winNums) ){
+         if( num === 0 || num === ''){
+            alert('숫자를 입력하세요')
+            return;
+            } else{
+         }
+      }
+      handlePopup()
    }
 
    return (
