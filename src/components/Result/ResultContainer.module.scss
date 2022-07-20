@@ -1,4 +1,5 @@
 @import "../../scss/color.scss";
+@import "../../scss/mixin.scss";
 
 .resultWrap {
    margin-top: 20px;
@@ -53,6 +54,22 @@
       background-color: $pointColor;
       &:hover{
          opacity: .8;
+      }
+   }
+}
+
+@include mobile{
+   .resultWrap {
+      .desc {
+         font-size: .9rem;
+      }
+      .inputSubject {
+         span {
+            font-size: 0.8rem;
+         }
+      }
+      .btnResultCheck {
+         font-size: 1.3rem;
       }
    }
 }
