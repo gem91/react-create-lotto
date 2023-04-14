@@ -26,6 +26,8 @@
    }
    .hasTickets {
       position: relative;
+      height: 20vh;
+      overflow-y: scroll;
       p.desc {
          position: relative;
          margin-top: 6px;
@@ -46,7 +48,7 @@
          }
       }
       .toggleButton{
-         position: absolute; top: 2px; right: 0;
+         position: absolute; top: 2px; right: 5%;
          .switch{
             z-index: 0;position: relative;
             input{
